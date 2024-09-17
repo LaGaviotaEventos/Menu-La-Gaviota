@@ -1,0 +1,133 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #b6b39a;
+    font-family: "Nanum Gothic", sans-serif;
+    color: #4a332d;
+}
+.container {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+/*///////////////////////////////////////////////////////////////////////////*/
+/*header*/
+.container-header {
+    margin: 0 auto;
+    margin-top: 1dvh;
+    height: 10dvh;
+    width: 90%;
+    padding: 5px 0;
+    top: 0;
+    background-color: #EEF0E5;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #4a332d;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*nav*/
+.container-nav {
+    margin: 0 auto;
+    height: 7vh;
+    width: 90%;
+    background-color: #EEF0E5;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #4a332d;
+}
+.container-nav ul {
+    padding: 0; 
+    margin: 0; 
+    list-style-type: none; 
+}
+.container-nav a {
+    color: #EEF0E5;
+    text-decoration: none;
+    margin: 0 2vw;
+}
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*Main*/
+.container-main {
+    background-color: #EEF0E5;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.container-main ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: grid;
+    height: 100%;
+    grid-template-rows: 1fr, 1fr ;
+}
+
+.container-main li {
+    background-color: #EEF0E5;
+    display: flex;
+    width: 70%;
+    margin: 7dvh auto; /* Agrega margen vertical para espaciado */
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border: 0.5px solid #4a332d;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    height: auto; /* Ajusta la altura al contenido */
+}
+
+
+.container-main a {
+    color: #4a332d;
+    font-size: 5dvi;
+    padding: 1dvw;
+    margin: 0 auto;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    justify-content: center; /* Centra en el eje X */
+    align-items: center; /* Centra en el eje Y */
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 1000px) {
+    .container-main a {
+        font-size: 5dvh;
+    }
+}
+
+
+
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*Footer*/
+.container-footer {
+    width: auto;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    margin-top: 1dvh;
+}
+
+.container-footer img {
+    height: 5vh;
+    margin-top: 1vh;
+    margin-left: 1vw;
+}
+.container-footer p {
+    margin-top: 5px;
+}
+.container-footer .img .estado-del-mar {
+    border-radius: 25px;
+}

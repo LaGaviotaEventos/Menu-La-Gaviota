@@ -1,0 +1,180 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #EEF0E5;
+    font-family: "Nanum Gothic", sans-serif;
+    color: #4a332d;
+}
+
+.container {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+}
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*Header*/
+.container-header {
+    width: 100%;
+    text-align: center;
+    display: inline-flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin: 15px 0;
+}
+
+.container-header .MENU {
+    margin: 0 auto;
+    margin-right: 30px; 
+    flex-grow: 1; 
+    height: 10dvh;
+    text-align: center;
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EEF0E5;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+}
+
+.container-header button {
+    margin: 0 2vw;
+    background-color: transparent;
+    border: none;
+}
+.container-header button a i {
+    color: #4a332d;
+}
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*MAIN*/
+.container-main {
+    background-color: #EEF0E5;
+    width: 100%;
+    margin: 0 auto;
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.main-ul {
+    padding: 0; 
+    margin: 0; 
+    list-style-type: none;
+    align-items: center;
+}
+.main-li {
+    display: flex;
+    width: 90%;
+    margin: 3vh auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: #EEF0E5;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
+}
+
+.container-main .main-body {
+    color: #4a332d;
+    font-size: 4vh;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 25px;
+    padding: 0 3vh;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: block;
+    border: 2px solid #4a332d;
+}
+
+.main-body h2 {
+    margin: 1vh;
+    border-bottom: 1px solid #4a332d ;
+}
+
+.main-img {
+    padding: 1dvh 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    gap: 5px; 
+    border-top: 1px solid #4a332d;
+    margin: 2dvh 0;
+}
+
+.main-body img {
+    height: 40dvh;
+    max-width: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 5px
+}
+
+.main-body h3 {
+    font-size: x-large;
+    text-align: center;
+    margin: 1vh 0 0.5vh;
+}
+
+.main-body p {
+    font-size: large;
+    margin: 0 4vw;
+}
+
+.main-body ul {
+    padding: 0; 
+    margin: 0; 
+    list-style-type: none;
+}
+
+.main-body li {
+    margin: 0 1vw 10px;
+}
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*Footer*/
+.container-footer {
+    width: auto;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin-top: 1dvh;
+}
+
+.container-footer img {
+    height: 5vh;
+    margin-top: 1vh;
+    margin-left: 1vw;
+}
+.container-footer p {
+    margin-top: 5px;
+}
+.container-footer .img .estado-del-mar {
+    border-radius: 25px;
+}
+
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*barra de scroll, */
+/* Estilos específicos para navegadores WebKit (Chrome, Safari, etc.) */
+.main-img::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento vertical */
+    height: 8px; /* Altura de la barra de desplazamiento horizontal */
+}
+
+.main-img::-webkit-scrollbar-thumb {
+    background-color: #4a332d; /* Color de la "thumb" */
+    border-radius: 10px; /* Bordes redondeados para la "thumb" */
+}
+
+.main-img::-webkit-scrollbar-track {
+    background-color: transparent; /* Fondo transparente para la pista */
+}
+.main-img::-webkit-scrollbar-button {
+    display: none; /* Oculta las flechas de desplazamiento en las esquinas */
+}

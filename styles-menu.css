@@ -1,0 +1,253 @@
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*Body*/
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #b6b39a;
+    font-family: "Nanum Gothic", sans-serif;
+    color: #4a332d;
+    scroll-behavior: smooth;
+    scroll-padding: 100px;
+}
+
+.container {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+}
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*Header*/
+.container-header {
+    width: 100%;
+    text-align: center;
+    display: inline-flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin: 15px 0;
+}
+
+.container-header .MENU {
+    margin: 0 auto;
+    margin-right: 30px; 
+    flex-grow: 1; 
+    height: 10dvh;
+    text-align: center;
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EEF0E5;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+}
+
+.container-header button {
+    margin: 0 2vw;
+    background-color: transparent;
+    border: none;
+}
+.container-header button a i {
+    color: #4a332d;
+}
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*Nav*/
+.container-nav {
+    overflow-x: hidden;
+    position: sticky;
+    top: 0;
+    font-family: sans-serif;
+}
+.scroll-container {
+    overflow-x: auto;
+    box-sizing: content-box;
+    padding: 5px;
+    white-space: nowrap;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.horizontal-list {
+    display: inline-flex; 
+    list-style-type: none;
+    padding: 0;
+    margin-left: 30px;
+}
+.horizontal-list li a {
+    display: inline-block;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #EEF0E5;
+    border-radius: 25px;
+    color: #4a332d;
+    text-decoration: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*Main*/
+.container-main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1dvh;
+}
+
+.seccion-productos {
+    background-color: #EEF0E5;
+    width: 90%;
+    border-radius: 25px;
+}
+
+.seccion-productos ul {
+    padding: 0; 
+    margin: 0; 
+    list-style-type: none; 
+}
+
+.los-h2 {
+    width: 90%;
+    margin: 15px auto;
+    text-align: center;
+    padding: 5px 1vw;
+    border-bottom: 1px solid #b6b39a;
+}
+
+.item {
+    width: 90%;
+    border: 1px solid #4a332d; /* Borde más suave */
+    margin: 10px auto; /* Espacio entre los items */
+    padding: 10px; /* Espacio interior */
+    display: grid;
+    grid-template-columns: auto 1fr; /* Dos columnas: imagen y contenido */
+    gap: 0 10px; /* Espacio entre columnas */
+    background-color: #EEF0E5; /* Fondo ligero */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    align-items: center; /* Alineación vertical centrada */
+}
+
+.item img {
+    border: none; /* Quitar borde */
+    height: 100px; /* Ajuste de tamaño */
+    width: 100px; /* Ajuste de tamaño */
+    border-radius: 5px; /* Bordes redondeados */
+    grid-row: 1 / span 5; /* Imagen ocupa ambas filas (título y descripción) */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+    margin: auto;
+}
+
+.item h3 {
+    margin: 0;
+    font-size: 1.2em; /* Tamaño de fuente */
+    color: #4a332d; /* Color de texto */
+    margin-left: 50px;
+    grid-column: 2; /* Asegura que el título esté en la segunda columna */
+}
+
+.item .descripcion {
+    grid-column: 2; /* Asegura que la descripción esté en la segunda columna */
+    font-size: 1em; /* Tamaño de fuente */
+    color: #4a332d; /* Color de texto */
+    margin-left: 50px;
+    margin-top: 5px; /* Espacio superior entre el título y la descripción */
+    margin-bottom: 0;
+}
+
+.item .precio {
+    font-size: 1.2em; /* Tamaño de fuente */
+    font-weight: bold; /* Resalta el precio */
+    color: #4a332d; /* Color de texto */
+    text-align: right; /* Alineación derecha */
+    grid-column: 2; /* Precio en la segunda columna */
+    grid-row: 5;
+    align-self: end; /* Coloca el precio en la parte inferior */
+    justify-self: end; /* Alinea el precio a la derecha */
+    margin: 5px;
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 600px) {
+    .item {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+        grid-template-rows: auto; /* Tres filas: imagen, título, descripción */
+    }
+    
+    .item h3, .item .descripcion, .item .precio {
+        grid-column: 1; /* Asegurar que todo esté en la misma columna */
+    }
+
+    .item h3 {
+        grid-row: 1;
+        padding: 5px 0;
+        text-align: center;
+        margin: 0;
+    }
+
+    .item img {
+        grid-row: 1; /* Imagen en la primera fila */
+        justify-self: center; /* Centrar imagen */
+        grid-row: 2;
+        margin-top: 10px;
+    }
+
+
+    .item .precio {
+        grid-row: 4;
+        padding: 2px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .item .descripcion {
+        margin: 10px;
+        grid-row: 3;
+        text-align: center;
+    }
+}
+
+
+
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*Footer*/
+.container-footer {
+    width: auto;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin-top: 1dvh;
+}
+
+.container-footer img {
+    height: 5vh;
+    margin-top: 1vh;
+    margin-left: 1vw;
+}
+.container-footer p {
+    margin-top: 5px;
+}
+.container-footer .img .estado-del-mar {
+    border-radius: 25px;
+}
+
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*barra de scroll, */
+/* Estilos específicos para navegadores WebKit (Chrome, Safari, etc.) */
+.scroll-container::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento vertical */
+    height: 8px; /* Altura de la barra de desplazamiento horizontal */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #4a332d; /* Color de la "thumb" */
+    border-radius: 10px; /* Bordes redondeados para la "thumb" */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background-color: transparent; /* Fondo transparente para la pista */
+}
+
+.scroll-container::-webkit-scrollbar-button {
+    display: none; /* Oculta las flechas de desplazamiento en las esquinas */
+}
